@@ -1,0 +1,47 @@
+.container {
+  background: right 2.5rem top 2rem / contain no-repeat
+    url("../images/pattern-bg.svg"); //,
+  background-size: 34rem;
+}
+.controls {
+  top: 31.75rem;
+  right: 19rem;
+}
+.slider {
+  padding: 0 1rem 0 3rem;
+}
+.slide {
+  grid-template-areas:
+    ". .  .photo photo"
+    "text text text photo photo"
+    ". . . photo photo";
+  margin: 2.75rem 6rem;
+  .text-wrapper {
+    text-align: left;
+  }
+  img {
+    grid-area: photo;
+    width: 100%;
+    max-width: 25rem;
+    margin-right: 0;
+  }
+  .text-wrapper {
+    grid-area: text;
+    grid-area: text-start / photo-start / text-end / photo-end;
+    background-position: left 4rem top -1.5rem;
+    padding-top: 2.5rem;
+    z-index: 3;
+    max-width: 55%;
+    margin-left: 3rem;
+    .quote {
+      font-size: 1.5rem;
+    }
+  }
+  .person-details .name,
+  .person-details .name + p {
+    display: inline;
+  }
+}
+.slide.active {
+  display: grid;
+}
